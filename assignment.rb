@@ -62,6 +62,7 @@ CSV.foreach("listings.csv", headers: true) do |obj|
 end
 
 get '/listings' do
+  content_type :json
   opts = { 
             min_price: params[:min_price],
             max_price: params[:max_price],
